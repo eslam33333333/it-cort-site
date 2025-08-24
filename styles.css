@@ -29,6 +29,89 @@ header {
   align-items: center;
 }
 
+
+
+
+
+
+
+
+
+/* Navbar */
+.navbar {
+  background-color: #111; /* لون غامق للناف بار */
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar .logo a {
+  color: #fff; /* اللوجو أبيض */
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff; /* اللينكات بيضا */
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f39c12; /* لون مميز عند المرور */
+}
+
+/* موبايل */
+#menu-toggler {
+  display: none;
+}
+
+#hamburger-btn {
+  display: none;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  #hamburger-btn {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    flex-direction: column;
+    background: #111;
+    width: 100%;
+    transition: left 0.3s ease;
+    padding: 20px 0;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+
 .container {
   max-width: 1200px;
   width: 100%;
