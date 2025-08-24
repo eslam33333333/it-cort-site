@@ -186,11 +186,22 @@ window.addEventListener("load", () => {
 });
 
 
- document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      const navbar = document.querySelector('.navbar-collapse');
-      if (navbar.classList.contains('show')) {
-        new bootstrap.Collapse(navbar).toggle();
-      }
-    });
+
+
+
+// زرار فتح القائمة
+const toggle = document.getElementById("menu-toggler");
+const navLinks = document.querySelector(".nav-links");
+
+// لما اضغط على زرار الهامبورجر يفتح/يقفل القائمة
+document.getElementById("hamburger-btn").addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+// لما اضغط على أي لينك يقفل القائمة
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    toggle.checked = false; // عشان يقفل الـ checkbox برضه
   });
+});
