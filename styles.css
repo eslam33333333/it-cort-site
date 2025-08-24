@@ -477,20 +477,23 @@ section .card p {
 
 
 
-
 /* Navbar */
 .navbar {
-  background-color: #111; /* لون غامق للناف بار */
+  background-color: rgba(17, 17, 17, 0.95); /* خلفية غامقة */
   padding: 10px 20px;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
 .navbar .logo a {
-  color: #fff; /* اللوجو أبيض */
+  background: linear-gradient(45deg, #00c6ff, #ff0080, #7928ca);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 22px;
   font-weight: bold;
   text-decoration: none;
@@ -503,17 +506,21 @@ section .card p {
 }
 
 .nav-links a {
-  color: #fff; /* اللينكات بيضا */
+  background: linear-gradient(45deg, #00c6ff, #ff0080, #7928ca);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration: none;
   font-size: 18px;
-  transition: color 0.3s ease;
+  font-weight: 500;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #f39c12; /* لون مميز عند المرور */
+  opacity: 0.8;
+  transform: scale(1.1);
 }
 
-/* موبايل */
+/* أيقونة الموبايل */
 #menu-toggler {
   display: none;
 }
@@ -521,7 +528,9 @@ section .card p {
 #hamburger-btn {
   display: none;
   font-size: 26px;
-  color: #fff;
+  background: linear-gradient(45deg, #00c6ff, #ff0080, #7928ca);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   cursor: pointer;
 }
 
@@ -536,10 +545,11 @@ section .card p {
     top: 60px;
     left: -100%;
     flex-direction: column;
-    background: #111;
+    background: rgba(17, 17, 17, 0.98); /* خلفية الموبايل */
     width: 100%;
     transition: left 0.3s ease;
     padding: 20px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.7);
   }
 
   .nav-links.active {
@@ -548,8 +558,17 @@ section .card p {
 
   .nav-links li {
     text-align: center;
-    padding: 10px 0;
+    padding: 12px 0;
+  }
+
+  .nav-links a {
+    font-size: 20px;
   }
 }
+
+
+
+
+
 
 
