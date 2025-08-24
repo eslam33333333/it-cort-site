@@ -189,19 +189,14 @@ window.addEventListener("load", () => {
 
 
 
-// زرار فتح القائمة
-const toggle = document.getElementById("menu-toggler");
-const navLinks = document.querySelector(".nav-links");
 
-// لما اضغط على زرار الهامبورجر يفتح/يقفل القائمة
-document.getElementById("hamburger-btn").addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
 
-// لما اضغط على أي لينك يقفل القائمة
+
+
+// إغلاق القائمة بعد الضغط على أي لينك
 document.querySelectorAll(".nav-links a").forEach(link => {
   link.addEventListener("click", () => {
-    navLinks.classList.remove("active");
-    toggle.checked = false; // عشان يقفل الـ checkbox برضه
+    document.getElementById("menu-toggler").checked = false;
   });
 });
+
