@@ -193,10 +193,19 @@ window.addEventListener("load", () => {
 
 
 
-// إغلاق القائمة بعد الضغط على أي لينك
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    document.getElementById("menu-toggler").checked = false;
-  });
+
+const menuToggler = document.getElementById("menu-toggler");
+const navLinks = document.querySelector(".nav-links");
+const hamburgerBtn = document.getElementById("hamburger-btn");
+
+// لما تدوس على الزرار يفتح/يقفل المينيو
+hamburgerBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
 });
 
+// لو ضغطت على أي لينك في الموبايل يقفل المينيو
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
+});
