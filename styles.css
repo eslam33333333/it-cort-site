@@ -476,27 +476,47 @@ section .card p {
 
 
 
-/* ===== تحسين القائمة في الموبايل ===== */
-@media (max-width: 860px) {
-  .navbar .nav-links {
-    background-color: rgba(0, 0, 0, 0.95); /* غامق أكتر */
-  }
 
-  .navbar .nav-links a {
-    color: #fff; /* لون أبيض أوضح */
-    display: block;
-    padding: 12px 0;
-  }
 
-  .navbar .nav-links a:hover {
-    color: #4CAF50; /* أخضر عند المرور */
-  }
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #111; /* خلفية غامقة ثابتة بدل الشفافية */
+  z-index: 1000;
 }
 
+@media (width < 860px) {
+  .navbar .nav-links {
+    position: fixed;
+    top: 77px;
+    left: -100%;
+    height: 100%;
+    display: block;
+    background-color: #111; /* خلفية غامقة كاملة */
+    width: 300px;
+    padding-left: 20px;
+    padding-top: 30px;
+    transition: all 0.4s ease;
+  }
 
+  .navbar .nav-links.active {
+    left: 0; /* عشان تظهر */
+  }
 
+  #hamburger-btn {
+    display: block;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+  }
 
-
-
-
+  .nav-links li {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+}
 
