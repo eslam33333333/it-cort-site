@@ -520,3 +520,158 @@ header {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= Back To Top Button ================= */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: background 0.3s ease;
+  z-index: 1000;
+}
+.back-to-top:hover {
+  background: #0056b3;
+}
+
+/* ================= Dark / Light Mode Toggle Button ================= */
+.mode-toggle {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: background 0.3s ease;
+  z-index: 1000;
+}
+.mode-toggle:hover {
+  background: #444;
+}
+
+/* ================= Dark Mode ================= */
+[data-theme="dark"] body {
+  background: #121212;
+  color: #f1f1f1;
+}
+
+[data-theme="dark"] header {
+  background: rgba(20, 20, 20, 0.9);
+}
+
+[data-theme="dark"] .navbar a {
+  color: #fff;
+}
+
+[data-theme="dark"] .navbar a:hover {
+  color: #bbb;
+}
+
+[data-theme="dark"] section .card {
+  background: #1e1e1e;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+[data-theme="dark"] .footer {
+  background: #000;
+}
+
+[data-theme="dark"] #langBtn {
+  background: #333;
+  color: #fff;
+}
+
+[data-theme="dark"] #langBtn:hover {
+  background: #fff;
+  color: #111;
+}
+
+/* ================= Scroll Animations ================= */
+.card, .section-title, .text {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease-out;
+}
+.card.show, .section-title.show, .text.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= Counters ================= */
+.counters {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+}
+.counter {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* ================= Portfolio Filter ================= */
+.filter-btns {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.filter-btn {
+  background: #f5f5f5;
+  border: none;
+  padding: 10px 18px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.filter-btn.active, .filter-btn:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+
+
+
+
