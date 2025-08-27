@@ -29,6 +29,11 @@ header {
   align-items: center;
 }
 
+
+
+
+
+
 .container {
   max-width: 1200px;
   width: 100%;
@@ -402,3 +407,47 @@ section *.show {
   opacity: 1;
   transform: translateY(0);
 }
+
+
+
+
+
+
+
+/* ----- NAVBAR ----- */
+.navbar {
+  justify-content: space-between;
+}
+
+/* ----- HOME ----- */
+.homepage .text h1 {
+  font-size: 60px;
+  font-weight: 700; /* ✅ صلحت px */
+  margin-bottom: 10px;
+}
+
+.homepage a {
+  color: #333;
+  text-decoration: none;
+  background: #fff;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* ✅ صلحت */
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+/* ----- SCROLL ANIMATION ----- */
+section * {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease-out;
+}
+
+section .show { /* ✅ صلحت */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
