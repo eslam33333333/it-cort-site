@@ -2,8 +2,6 @@
 
 
 
-
-
 // ============ Back To Top ============
 const backToTopBtn = document.createElement("button");
 backToTopBtn.className = "back-to-top";
