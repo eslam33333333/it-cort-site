@@ -36,7 +36,7 @@ header {
   padding: 0 20px;
 }
 
-/*----- NAVBAR-----*/
+/----- NAVBAR-----/
 .navbar {
   justify-content: space-between;
 }
@@ -59,7 +59,7 @@ header {
   color: #ddd;
 }
 
-/*----- HOME -----*/
+/----- HOME -----/
 .homepage {
   position: relative;
   height: 100vh;
@@ -115,7 +115,7 @@ header {
   background: rgba(255, 255, 255, 0.3);
 }
 
-/*----- SERVICES -----*/
+/----- SERVICES -----/
 section {
   padding-top: 80px;
 }
@@ -155,7 +155,7 @@ section .card p {
   margin-top: 5px;
 }
 
-/*----- PORTFOLIO -----*/
+/----- PORTFOLIO -----/
 .portfolio .card {
   padding: 0 0 20px;
 }
@@ -166,7 +166,7 @@ section .card p {
   border-radius: 8px 8px 0 0;
 }
 
-/*----- ABOUT -----*/
+/----- ABOUT -----/
 .about .company-info {
   margin-top: 30px;
 }
@@ -183,7 +183,7 @@ section .card p {
   padding-left: 20px;
 }
 
-/*----- CONTACT -----*/
+/----- CONTACT -----/
 .contact-details {
   margin-left: 20px;
 }
@@ -242,7 +242,7 @@ section .card p {
   background: #525252;
 }
 
-/*----- FOOTER -----*/
+/----- FOOTER -----/
 .footer {
   background: #333;
   padding: 20px 0;
@@ -257,7 +257,7 @@ section .card p {
   display: none;
 }
 
-/*----- RESPONSIVENESS -----*/
+/----- RESPONSIVENESS -----/
 @media (width < 860px) {
   .navbar .nav-links {
     position: fixed;
