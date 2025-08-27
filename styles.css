@@ -85,31 +85,50 @@ header {
 }
 
 /* Responsive Navbar */
-@media (max-width: 768px) {
-  #hamburger-btn {
-    display: block;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 60px;
+@media (max-width: 860px) {
+  .navbar .nav-links {
+    position: fixed;
+    top: 77px;
     left: -100%;
-    flex-direction: column;
-    background: #111;
-    width: 100%;
-    transition: left 0.3s ease;
-    padding: 20px 0;
+    height: 100%;
+    width: 300px;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 30px 20px;
+    transition: all 0.4s ease;
   }
 
-  .nav-links.active {
+  #menu-toggler:checked ~ .nav-links {
     left: 0;
   }
 
   .nav-links li {
-    text-align: center;
-    padding: 10px 0;
+    margin: 15px 0;
+    font-size: 18px;
+  }
+
+  #hamburger-btn {
+    display: block;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
   }
 }
+
+/* للشاشات الكبيرة */
+@media (min-width: 861px) {
+  .nav-links {
+    display: flex !important;
+    position: static;
+    height: auto;
+    width: auto;
+    background: transparent;
+    padding: 0;
+  }
+
+  .nav-links li {
+    margin: 0 10px;
+  }
 
 
 .container {
